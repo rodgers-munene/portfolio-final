@@ -6,7 +6,7 @@ import Home from "./pages/Home"
 function App() {
 
   return (
-    <div className='bg-white dark:bg-[#282C33] w-screen min-h-screen flex flex-col items-center transition-colors duration-500'>
+    <div className='bg-[#282C33] w-screen min-h-screen flex flex-col items-center transition-colors duration-500'>
       <Router>
         <Routes>
           <Route path="/" element={<Layout><Home /></Layout>}/>

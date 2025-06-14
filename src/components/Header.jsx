@@ -1,18 +1,41 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from './Navbar'
+import { Menu, XIcon } from 'lucide-react'
 import logo from '../assets/Logo.svg'
+import Hamburger from './Hamburger'
 
 const Header = () => {
+  const [isHamMenu, setIsHamMenu] = useState(false)
+
+  const toggleNavbar = () => {
+    setIsHamMenu((prev) => !prev);
+  }
+ 
   return (
-    <div className='w-[90vw] h-14 flex justify-between items-center'>
+    <div className='relative w-[90vw] h-14 flex justify-between items-center'>
         {/* Logo */}
         <div className='w-1/3 flex'>
             <img src={logo} alt="logo" className='w-8 h-8'/>
             <h1 className='ml-4 text-white font-medium '>Rodgers</h1>
         </div>
-        <div className='w-1/3'>
+        <div className='md:w-1/2 lg:w-1/3 hidden md:block'>
             <Navbar />
         </div>
+        {/* hamburger menu */}
+        <div className='block md:hidden'>
+          <button
+          onClick={toggleNavbar}
+          className=''>
+            {isHamMenu? <XIcon className='text-white'/> : <Menu className='text-white'/>}
+          </button>
+
+    
+          <div className={`absolute right-0 transition-tranform duration-500 ${isHamMenu? "top-12": "-top-52"}`}>
+            <Hamburger />
+          </div>
+        </div>
+
+
     </div>
   )
 }

@@ -1,13 +1,13 @@
 import React from 'react'
-import ThemeToggle from './ToggleTheme'
 import Header from './Header'
 import Footer from './Footer'
+import FloatingLinks from './FloatingLinks'
 
 const Layout = ( {children} ) => {
   return (
     <div className='w-full flex flex-col items-center'>
         <Header />
-        <ThemeToggle />
+        <FloatingLinks />
         <main>
             {children}
         </main>
