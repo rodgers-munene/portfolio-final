@@ -12,7 +12,7 @@ const Projects = () => {
           <h1 className="text-white text-2xl sm:text-3xl mr-3 flex">
             <span className="text-[#C778DD]">#</span> projects
           </h1>
-          <div className="hidden sm:block w-full border-b h-0 border-[#C778DD]"></div>
+          <div className="hidden sm:block w-2/3 border-b h-0 border-[#C778DD]"></div>
         </div>
         <button className="flex items-center text-white whitespace-nowrap">
           View all <ArrowRight className="ml-2" />
