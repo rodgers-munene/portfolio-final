@@ -1,6 +1,6 @@
 import React from "react";
-import outline from "../assets/outline.png";
-import dots from "../assets/Dots.svg";
+import outline from "../../assets/outline.png";
+import dots from "../../assets/Dots.svg";
 
 const skillsData = [
   {

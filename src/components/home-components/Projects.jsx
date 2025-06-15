@@ -1,6 +1,6 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
-import { ProjectsData } from "../services/Data";
+import { ProjectsData } from "../../services/Data";
 import { ArrowRightLeft } from "lucide-react";
 
 const Projects = () => {

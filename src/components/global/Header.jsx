@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Navbar from './Navbar'
 import { Menu, XIcon } from 'lucide-react'
-import logo from '../assets/Logo.svg'
+import logo from '../../assets/Logo.svg'
 import Hamburger from './Hamburger'
 
 const Header = () => {
