@@ -1,29 +1,9 @@
 import React from "react";
 import outline from "../../assets/outline.png";
-import dots from "../../assets/Dots.svg";
+import dots from "../../assets/Dots.svg"
+import { skillsData } from "../../services/Data";
 
-const skillsData = [
-  {
-    title: "Languages",
-    details: ["Java", "JavaScript", "Python", "TypeScript", "Kotlin"],
-  },
-  {
-    title: "Databases",
-    details: ["MySql", "MongoDB", "FireBase Firestore", "PostgreSql"],
-  },
-  {
-    title: "other",
-    details: ["HTML", "CSS", "Tailwind"],
-  },
-  {
-    title: "Tools",
-    details: ["VSCode", "Android Studio", "Linux", "Anaconda", "Github"],
-  },
-  {
-    title: "Frameworks",
-    details: ["React", "Springboot", "Django", "NodeJs", "ExpressJs"],
-  },
-];
+
 
 const Skills = () => {
   return (

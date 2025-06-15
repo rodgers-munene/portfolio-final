@@ -2,7 +2,7 @@ import React from "react";
 import { FaLinkedin, FaDiscord } from "react-icons/fa";
 import { Mail } from "lucide-react";
 
-const Contacts = () => {
+const ContactMe = () => {
   return (
     <div className="w-full sm:w-[90vw] max-w-7xl mx-auto px-4 py-6 md:py-8 lg:py-10">
       <div className="mb-6 md:mb-8 lg:mb-10">
@@ -41,4 +41,4 @@ const Contacts = () => {
   );
 };
 
-export default Contacts;
+export default ContactMe;

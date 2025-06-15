@@ -4,7 +4,7 @@ import FunnyQuote from '../components/home-components/FunnyQuote'
 import ProjectsSection from '../components/home-components/ProjectsHome'
 import Skills from '../components/home-components/Skills'
 import AboutMe from '../components/home-components/AboutMe'
-import Contacts from '../components/home-components/Contacts'
+import ContactMe from '../components/home-components/ContactMe'
 
 const Home = () => {
   return (
@@ -14,7 +14,7 @@ const Home = () => {
         <ProjectsSection />
         <Skills />
         <AboutMe />
-        <Contacts />
+        <ContactMe />
     </div>
   )
 }

@@ -66,3 +66,36 @@ export const smallProjects = [
         description: "Waste Management system"
     },
 ]
+
+export const skillsData = [
+  {
+    title: "Languages",
+    details: ["Java", "JavaScript", "Python", "TypeScript", "Kotlin"],
+  },
+  {
+    title: "Databases",
+    details: ["MySql", "MongoDB", "FireBase Firestore", "PostgreSql"],
+  },
+  {
+    title: "other",
+    details: ["HTML", "CSS", "Tailwind"],
+  },
+  {
+    title: "Tools",
+    details: ["VSCode", "Android Studio", "Linux", "Anaconda", "Github"],
+  },
+  {
+    title: "Frameworks",
+    details: ["React", "Springboot", "Django", "NodeJs", "ExpressJs"],
+  },
+];
+
+export const funFacts = [
+  "I am a curious soul",
+  "I love playing BasketBall",
+  "Favourite Meal - Anything that involves Chapati",
+  "I love creating - I love fixing bugs",
+  "Favourite Show - Attack on Titans",
+  "I love networking and meeting new people",
+  "I value clear communication"
+]

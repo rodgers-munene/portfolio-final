@@ -6,15 +6,6 @@ import dots from "../../assets/Dots.svg";
 const AboutMe = () => {
   return (
     <div className="w-full sm:w-[90vw] max-w-7xl mx-auto px-4 py-6 md:py-8 lg:py-10">
-      {/* title */}
-      <div className="mb-6 md:mb-8 lg:mb-10">
-        <div className="flex items-center w-full">
-          <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-medium mr-3 flex">
-            <span className="text-[#C778DD]">#</span>about-me
-          </h1>
-          <div className="hidden sm:block flex-grow max-w-lg border-b h-0 border-[#C778DD]"></div>
-        </div>
-      </div>
 
       {/* details Section  */}
       <div className="w-full flex flex-col lg:flex-row justify-between gap-8 sm:px-4 py-6">
@@ -40,9 +31,6 @@ const AboutMe = () => {
             tools to push my skills further and deliver clean, impactful code.
           </p>
 
-          <button className="flex items-center border text-white px-4 py-2 border-[#C778DD] hover:bg-[#C778DD] transition-colors duration-300 text-sm mt-2">
-            Read More <ArrowRight className="ml-2 w-4 h-4" />
-          </button>
         </div>
 
         {/* Image Section */}
