@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ProjectsSection from '../components/projects/ProjectsSection'
 import SmallProjects from '../components/projects/SmallProjects'
+import { useLocation } from 'react-router-dom'
 
 const Projects = () => {
+  const location = useLocation()
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [location.pathname])
+
   return (
     <div className='min-h-screen'>
         {/* title */}

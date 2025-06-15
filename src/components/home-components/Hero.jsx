@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import outline from "../../assets/outline.png";
 import hacker from "../../assets/hackerNoBg.png";
 import dots from "../../assets/Dots.svg";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate()
+
   return (
     <div className="w-full px-4 sm:px-0 sm:w-[90vw] flex flex-col sm:flex-row h-auto sm:h-80 border-pink-500 mt-8 sm:mt-14 justify-between">
       {/* intro section */}
@@ -19,7 +22,11 @@ const Hero = () => {
           and thoughtful interfaces
         </p>
 
-        <button className="border border-[#C778DD] text-white px-3 py-1 mt-5 sm:mt-7 hover:bg-[#C778DD] hover:bg-opacity-10 transition-colors text-sm sm:text-base lg:text-lg">
+        <button
+        onClick={() => {
+          navigate('/contact-me')
+        }}
+         className="border border-[#C778DD] text-white px-3 py-1 mt-5 sm:mt-7 hover:bg-[#C778DD] hover:bg-opacity-10 transition-colors text-sm sm:text-base lg:text-lg">
           Contact me!!
         </button>
       </div>

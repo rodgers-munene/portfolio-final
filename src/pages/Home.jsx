@@ -6,6 +6,7 @@ import Skills from '../components/home-components/Skills'
 import AboutMe from '../components/home-components/AboutMe'
 import ContactMe from '../components/home-components/ContactMe'
 
+
 const Home = () => {
   return (
     <div className='min-h-screen'>

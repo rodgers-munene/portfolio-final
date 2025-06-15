@@ -2,8 +2,10 @@ import { ArrowRight } from "lucide-react";
 import React from "react";
 import Hacker from "../../assets/hackerNoBg.png";
 import dots from "../../assets/Dots.svg";
+import { useNavigate } from "react-router-dom";
 
 const AboutMe = () => {
+  const navigate = useNavigate()
   return (
     <div className="w-full sm:w-[90vw] max-w-7xl mx-auto px-4 py-6 md:py-8 lg:py-10">
       {/* title */}
@@ -40,7 +42,11 @@ const AboutMe = () => {
             tools to push my skills further and deliver clean, impactful code.
           </p>
 
-          <button className="flex items-center border text-white px-4 py-2 border-[#C778DD] hover:bg-[#C778DD] transition-colors duration-300 text-sm mt-2">
+          <button 
+          onClick={() => {
+            navigate('/about-me')
+          }}
+          className="flex items-center border text-white px-4 py-2 border-[#C778DD] hover:bg-[#C778DD] transition-colors duration-300 text-sm mt-2">
             Read More <ArrowRight className="ml-2 w-4 h-4" />
           </button>
         </div>

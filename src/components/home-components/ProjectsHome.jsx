@@ -2,8 +2,10 @@ import React from "react";
 import { ArrowRight } from "lucide-react";
 import { ProjectsData } from "../../services/Data";
 import { ArrowRightLeft } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const ProjectsSection = () => {
+  const navigate = useNavigate();
   return (
     <div className="w-full sm:w-[90vw] max-w-7xl mx-auto px-4 py-6">
       {/* title section */}
@@ -14,7 +16,11 @@ const ProjectsSection = () => {
           </h1>
           <div className="hidden sm:block w-2/3 border-b h-0 border-[#C778DD]"></div>
         </div>
-        <button className="flex items-center text-white whitespace-nowrap">
+        <button
+        onClick={() => {
+          navigate('/projects')
+        }}
+         className="flex items-center text-white whitespace-nowrap">
           View all <ArrowRight className="ml-2" />
         </button>
       </div>

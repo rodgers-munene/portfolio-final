@@ -3,9 +3,12 @@ import Navbar from './Navbar'
 import { Menu, XIcon } from 'lucide-react'
 import logo from '../../assets/Logo.svg'
 import Hamburger from './Hamburger'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 const Header = () => {
   const [isHamMenu, setIsHamMenu] = useState(false)
+  const navigate = useNavigate()
+  const location = useLocation()
 
   const toggleNavbar = () => {
     setIsHamMenu((prev) => !prev);
@@ -14,9 +17,15 @@ const Header = () => {
   return (
     <div className='relative w-[90vw] h-14 flex justify-between items-center'>
         {/* Logo */}
-        <div className='w-1/3 flex'>
+        <div
+        onClick={() => {
+          if(location.pathname !== '/'){
+             navigate('/')
+          }
+        }}
+         className='flex cursor-pointer'>
             <img src={logo} alt="logo" className='w-8 h-8'/>
-            <h1 className='ml-4 text-white font-medium '>Rodgers</h1>
+            <h1 className='ml-4 text-white font-medium'>Rodgers</h1>
         </div>
         <div className='md:w-1/2 lg:w-1/3 hidden md:block'>
             <Navbar />
