@@ -1,7 +1,7 @@
 import React from 'react'
 import Hero from '../components/home-components/Hero'
 import FunnyQuote from '../components/home-components/FunnyQuote'
-import Projects from '../components/home-components/Projects'
+import ProjectsSection from '../components/home-components/ProjectsHome'
 import Skills from '../components/home-components/Skills'
 import AboutMe from '../components/home-components/AboutMe'
 import Contacts from '../components/home-components/Contacts'
@@ -11,7 +11,7 @@ const Home = () => {
     <div className='min-h-screen'>
         <Hero />
         <FunnyQuote />
-        <Projects />
+        <ProjectsSection />
         <Skills />
         <AboutMe />
         <Contacts />

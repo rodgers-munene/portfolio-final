@@ -1,22 +1,18 @@
 import React from "react";
-import { ArrowRight } from "lucide-react";
 import { ProjectsData } from "../../services/Data";
 import { ArrowRightLeft } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 
-const Projects = () => {
+const ProjectsSection = () => {
   return (
-    <div className="w-[90vw] max-w-7xl mx-auto px-4 py-6">
+    <div className="w-full sm:w-[90vw] max-w-7xl mx-auto px-4 py-6">
       {/* title section */}
-      <div className="flex flex-row items-center justify-between gap-4">
+      <div className="">
         <div className="flex items-center w-full sm:w-2/3">
           <h1 className="text-white text-2xl sm:text-3xl mr-3 flex">
-            <span className="text-[#C778DD]">#</span> projects
+            <span className="text-[#C778DD]">#</span> complete-apps
           </h1>
-          <div className="hidden sm:block w-2/3 border-b h-0 border-[#C778DD]"></div>
         </div>
-        <button className="flex items-center text-white whitespace-nowrap">
-          View all <ArrowRight className="ml-2" />
-        </button>
       </div>
 
       {/* projects mapping */}
@@ -45,9 +41,16 @@ const Projects = () => {
               </h1>
               <p className="text-sm text-gray-300 my-2">{project.shortDesc}</p>
 
-              <button className="flex items-center border text-white border-[#C778DD] hover:bg-[#C778DD] py-1 px-3 w-max mt-auto">
-                Live <ArrowRightLeft className="ml-2" />
-              </button>
+              <div className="flex">
+                {index !== 3 && (
+                  <button className="flex items-center border text-white border-[#C778DD] hover:bg-[#C778DD] py-1 px-3 w-max mt-auto">
+                    Live <ArrowRightLeft className="ml-2" />
+                  </button>
+                )}
+                <button className={`flex items-center border text-white border-[#C778DD] hover:bg-[#C778DD] py-1 px-3 w-max mt-auto ${index === 3? "ml-0" : "ml-2"}`}>
+                  Github <FaGithub className="ml-2" />
+                </button>
+              </div>
             </div>
           </div>
         ))}
@@ -56,4 +59,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default ProjectsSection;

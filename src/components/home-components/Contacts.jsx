@@ -4,7 +4,7 @@ import { Mail } from "lucide-react";
 
 const Contacts = () => {
   return (
-    <div className="w-[90vw] max-w-7xl mx-auto px-4 py-6 md:py-8 lg:py-10">
+    <div className="w-full sm:w-[90vw] max-w-7xl mx-auto px-4 py-6 md:py-8 lg:py-10">
       <div className="mb-6 md:mb-8 lg:mb-10">
         <div className="flex items-center w-full">
           <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-medium mr-3 flex">

@@ -5,7 +5,7 @@ import dots from "../../assets/Dots.svg";
 
 const AboutMe = () => {
   return (
-    <div className="w-[90vw] max-w-7xl mx-auto px-4 py-6 md:py-8 lg:py-10">
+    <div className="sm:w-[90vw] max-w-7xl mx-auto px-4 py-6 md:py-8 lg:py-10">
       {/* title */}
       <div className="mb-6 md:mb-8 lg:mb-10">
         <div className="flex items-center w-full">
@@ -17,7 +17,7 @@ const AboutMe = () => {
       </div>
 
       {/* details Section  */}
-      <div className="w-full flex flex-col lg:flex-row justify-between gap-8 px-4 py-6">
+      <div className="w-full flex flex-col lg:flex-row justify-between gap-8 sm:px-4 py-6">
         {/* Text Section */}
         <div className="w-full lg:w-1/2 flex flex-col gap-y-5 items-start mb-8 lg:mb-0">
           <p className="text-gray-300 text-sm md:text-base">

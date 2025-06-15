@@ -18,6 +18,7 @@ const Hamburger = () => {
             return(
                 <Link 
                 key={index}
+                to={item.path}
                 className={`w-full  pl-4 py-3 ${isActive? "text-white bg-gray-800": "text-gray-400"}`}>
                     <span className='text-[#C778DD]'>#</span>{item.name}</Link>
             )

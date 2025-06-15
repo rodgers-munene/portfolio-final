@@ -27,7 +27,7 @@ const skillsData = [
 
 const Skills = () => {
   return (
-    <div className="w-[90vw] max-w-7xl mx-auto px-4 py-6 md:py-8 lg:py-10">
+    <div className="w-full sm:w-[90vw] max-w-7xl mx-auto px-4 py-6 md:py-8 lg:py-10">
       {/* title */}
       <div className="mb-6 md:mb-8 lg:mb-10">
         <div className="flex items-center w-full">
