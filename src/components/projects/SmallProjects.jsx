@@ -1,6 +1,7 @@
 import React from 'react'
 import { smallProjects } from '../../services/Data'
 import { FaGithub } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 const SmallProjects = () => {
   return (
@@ -36,9 +37,12 @@ const SmallProjects = () => {
                           {project.description}
                         </p>
       
-                        <button className="flex items-center border text-white border-[#C778DD] hover:bg-[#C778DD] py-1 px-3 w-max mt-auto">
+                        <Link 
+                        to={project.gitLink}
+                        target='_blank'k
+                        className="flex items-center border text-white border-[#C778DD] hover:bg-[#C778DD] py-1 px-3 w-max mt-auto">
                           Github <FaGithub className="ml-2" />
-                        </button>
+                        </Link>
                       </div>
                     </div>
                   ))}

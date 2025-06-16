@@ -2,6 +2,7 @@ import React from "react";
 import { ProjectsData } from "../../services/Data";
 import { ArrowRightLeft } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const ProjectsSection = () => {
   return (
@@ -47,9 +48,12 @@ const ProjectsSection = () => {
                     Live <ArrowRightLeft className="ml-2" />
                   </button>
                 )}
-                <button className={`flex items-center border text-white border-[#C778DD] hover:bg-[#C778DD] py-1 px-3 w-max mt-auto ${index === 3? "ml-0" : "ml-2"}`}>
+                <Link 
+                to={project.gitLink}
+                target="_blank"
+                className={`flex items-center border text-white border-[#C778DD] hover:bg-[#C778DD] hover:text-white! py-1 px-3 w-max mt-auto ${index === 3? "ml-0" : "ml-2"}`}>
                   Github <FaGithub className="ml-2" />
-                </button>
+                </Link>
               </div>
             </div>
           </div>

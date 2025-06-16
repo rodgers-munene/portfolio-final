@@ -2,7 +2,8 @@ import React from "react";
 import { ArrowRight } from "lucide-react";
 import { ProjectsData } from "../../services/Data";
 import { ArrowRightLeft } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+import { FaGithub } from "react-icons/fa";
 
 const ProjectsSection = () => {
   const navigate = useNavigate();
@@ -17,10 +18,11 @@ const ProjectsSection = () => {
           <div className="hidden sm:block w-2/3 border-b h-0 border-[#C778DD]"></div>
         </div>
         <button
-        onClick={() => {
-          navigate('/projects')
-        }}
-         className="flex items-center text-white whitespace-nowrap">
+          onClick={() => {
+            navigate("/projects");
+          }}
+          className="flex items-center text-white whitespace-nowrap"
+        >
           View all <ArrowRight className="ml-2" />
         </button>
       </div>
@@ -55,9 +57,20 @@ const ProjectsSection = () => {
                     {project.shortDesc}
                   </p>
 
-                  <button className="flex items-center border text-white border-[#C778DD] hover:bg-[#C778DD] py-1 px-3 w-max mt-auto">
+                  <div className="flex">
+                    <button className="flex items-center border text-white border-[#C778DD] hover:bg-[#C778DD] py-1 px-3 w-max mt-auto">
                     Live <ArrowRightLeft className="ml-2" />
                   </button>
+                  <Link
+                    to={project.gitLink}
+                    target="_blank"
+                    className={`flex items-center border text-white border-[#C778DD] hover:bg-[#C778DD] hover:text-white! py-1 px-3 w-max mt-auto ${
+                      index === 3 ? "ml-0" : "ml-2"
+                    }`}
+                  >
+                    Github <FaGithub className="ml-2" />
+                  </Link>
+                  </div>
                 </div>
               </div>
             );

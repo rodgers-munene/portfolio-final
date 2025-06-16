@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <div className="w-full border-t border-gray-500 min-h-44 flex flex-col items-center justify-between pt-4 px-4 sm:px-0">
-      <div className="w-full sm:w-[90%] flex flex-col items-center sm:items-stretch sm:flex-row">
+    <div className="w-full border-t max-w-7xl border-gray-500 min-h-44 flex flex-col items-center justify-between pt-4 px-4 sm:px-0">
+      <div className="w-full sm:w-[90%]  flex flex-col items-center sm:items-stretch sm:flex-row">
         <div className="w-full sm:w-1/2 flex flex-col items-center sm:items-start text-center sm:text-left">
           <div className="flex flex-col sm:flex-row items-center">
             <div className="flex items-center">

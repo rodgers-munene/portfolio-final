@@ -15,7 +15,7 @@ const Header = () => {
   }
  
   return (
-    <div className='relative w-[90vw] h-14 flex justify-between items-center'>
+    <div className='relative w-[90vw] max-w-7xl h-14 flex justify-between items-center'>
         {/* Logo */}
         <div
         onClick={() => {

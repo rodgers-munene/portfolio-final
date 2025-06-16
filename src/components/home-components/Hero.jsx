@@ -8,7 +8,7 @@ const Hero = () => {
   const navigate = useNavigate()
 
   return (
-    <div className="w-full px-4 sm:px-0 sm:w-[90vw] flex flex-col sm:flex-row h-auto sm:h-80 border-pink-500 mt-8 sm:mt-14 justify-between">
+    <div className="w-full px-4 sm:px-0 sm:w-[90vw] max-w-7xl flex flex-col sm:flex-row h-auto sm:h-80 border-pink-500 mt-8 sm:mt-14 justify-between">
       {/* intro section */}
       <div className="w-full sm:w-1/2 min-h-full flex flex-col items-center sm:items-start text-center sm:text-left">
         <h1 className="text-white font-bold text-base sm:text-lg lg:text-2xl">

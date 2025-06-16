@@ -11,15 +11,18 @@ export const ProjectsData = [
         description: "A modern, full-stack e-commerce platform built using Node.js, React, and MongoDB, designed to deliver a fast, user-friendly shopping experience with features like M-Pesa integration.",
         shortDesc: "E-commerce platform",
         image: SwiftCart,
-        stack: ["NodeJs", "ReactJs", "ExpressJs", "Tailwind"]
-
+        stack: ["NodeJs", "ReactJs", "ExpressJs", "Tailwind"],
+        gitLink: "https://github.com/rodgers-munene/swiftcart",
+        liveLink: "https://swiftcart-alei.onrender.com"
     },
     {
         title: "Event Management System",
         description: "A modern, responsive Event Management System built with React and Vite.",
         shortDesc: "Manage Your Events",
         image: Event,
-        stack: ["NodeJs", "ReactJs", "ExpressJs"]
+        stack: ["NodeJs", "ReactJs", "ExpressJs"],
+        gitLink: "https://github.com/monicahwamuhu2/Event-Management-System-Grp-16",
+        liveLink: ""
 
     },
     {
@@ -27,7 +30,9 @@ export const ProjectsData = [
         description: "an intelligent movie recommendation system designed to help users discover their next favorite movie.",
         shortDesc: "Movie Recommendation System",
         image: FilmSage,
-        stack: ["Framer", "ReactJs", "TypeScript", "Tailwind"]
+        stack: ["Framer", "ReactJs", "TypeScript", "Tailwind"],
+        gitLink: "https://github.com/rodgers-munene/filmsage",
+        liveLink: ""
 
     },
     {
@@ -35,7 +40,9 @@ export const ProjectsData = [
         description: "Personal portfolio",
         shortDesc: "Developer portfolio website",
         image: Portfolio,
-        stack: ["ReactJs", "JavaScript", "Tailwind"]
+        stack: ["ReactJs", "JavaScript", "Tailwind"],
+        gitLink: "https://github.com/rodgers-munene/portfolio-final",
+        liveLink: ""
 
     },
     {
@@ -43,8 +50,9 @@ export const ProjectsData = [
         description: "A live web chart application",
         shortDesc: "Web Chat Application",
         image: Chat,
-        stack: ["ReactJs", "NodeJs", "Tailwind", "Socket-io"]
-
+        stack: ["ReactJs", "NodeJs", "Tailwind", "Socket-io"],
+        gitLink: "https://github.com/rodgers-munene",
+        liveLink: ""
     },
     
 ]
@@ -53,17 +61,20 @@ export const smallProjects = [
     {
         stack: ['Java', 'XML'],
         title: "Ecommerce Mobile",
-        description: "An ecommerce application built on Java"
+        description: "A mobile ecommerce app built on Java",
+        gitLink: "https://github.com/rodgers-munene/e-commerce-mobile"
     },
     {
         stack: ['Web3', 'NodeJs', "ReactJs"],
         title: "Asset Management App",
-        description: "Web3 Asset management system"
+        description: "Web3 Asset management system",
+        gitLink: "https://github.com/rodgers-munene/MyAsset"
     },
     {
         stack: ['php', 'VanillaJs', "HTML", "CSS"],
         title: "KLIN",
-        description: "Waste Management system"
+        description: "Waste Management system",
+        gitLink: "https://github.com/rodgers-munene/KLIN-Waste-Management"
     },
 ]
 
