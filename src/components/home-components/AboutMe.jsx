@@ -1,5 +1,4 @@
 import { ArrowRight } from "lucide-react";
-import React from "react";
 import Hacker from "../../assets/hackerNoBg.png";
 import dots from "../../assets/Dots.svg";
 import { useNavigate } from "react-router-dom";

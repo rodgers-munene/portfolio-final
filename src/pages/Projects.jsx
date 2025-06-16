@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import ProjectsSection from '../components/projects/ProjectsSection'
 import SmallProjects from '../components/projects/SmallProjects'
 import { useLocation } from 'react-router-dom'

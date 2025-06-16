@@ -1,4 +1,3 @@
-import React from "react";
 import { ProjectsData } from "../../services/Data";
 import { ArrowRightLeft } from "lucide-react";
 import { FaGithub } from "react-icons/fa";

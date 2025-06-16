@@ -1,4 +1,3 @@
-import React from 'react'
 import { smallProjects } from '../../services/Data'
 import { FaGithub } from 'react-icons/fa'
 import { Link } from 'react-router-dom'

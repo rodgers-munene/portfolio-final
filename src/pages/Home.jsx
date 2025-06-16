@@ -1,4 +1,3 @@
-import React from 'react'
 import Hero from '../components/home-components/Hero'
 import FunnyQuote from '../components/home-components/FunnyQuote'
 import ProjectsSection from '../components/home-components/ProjectsHome'

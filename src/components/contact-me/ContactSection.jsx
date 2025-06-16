@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { FaLinkedin, FaDiscord } from "react-icons/fa";
 import { Mail } from "lucide-react";
 import emailjs from 'emailjs-com'

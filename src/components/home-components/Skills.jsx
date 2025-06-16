@@ -1,4 +1,3 @@
-import React from "react";
 import outline from "../../assets/outline.png";
 import dots from "../../assets/Dots.svg"
 import { skillsData } from "../../services/Data";

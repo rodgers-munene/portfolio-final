@@ -1,4 +1,3 @@
-import React from "react";
 import { funFacts } from "../../services/Data";
 import outline from "../../assets/outline.png";
 import dots from "../../assets/Dots.svg"

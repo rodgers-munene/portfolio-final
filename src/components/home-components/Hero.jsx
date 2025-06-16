@@ -1,4 +1,3 @@
-import React, { useEffect, useRef, useState } from "react";
 import outline from "../../assets/outline.png";
 import hacker from "../../assets/hackerNoBg.png";
 import dots from "../../assets/Dots.svg";

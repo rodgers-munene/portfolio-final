@@ -1,4 +1,3 @@
-import React from "react";
 import logo from "../../assets/Logo.svg";
 import { FaGithub, FaLinkedin, FaDiscord } from "react-icons/fa";
 import { Link } from 'react-router-dom';

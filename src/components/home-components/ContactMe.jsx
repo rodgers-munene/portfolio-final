@@ -1,5 +1,4 @@
-import React from "react";
-import { FaLinkedin, FaDiscord } from "react-icons/fa";
+import { FaDiscord } from "react-icons/fa";
 import { Mail } from "lucide-react";
 
 const ContactMe = () => {
