@@ -43,9 +43,12 @@ const ProjectsSection = () => {
 
               <div className="flex">
                 {index !== 3 && (
-                  <button className="flex items-center border text-white border-[#C778DD] hover:bg-[#C778DD] py-1 px-3 w-max mt-auto">
+                  <Link
+                  to={project.liveLink}
+                  target="_blank"
+                  className="flex items-center border text-white border-[#C778DD] hover:bg-[#C778DD] py-1 px-3 w-max mt-auto">
                     Live <ArrowRightLeft className="ml-2" />
-                  </button>
+                  </Link>
                 )}
                 <Link 
                 to={project.gitLink}

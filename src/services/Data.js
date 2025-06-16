@@ -13,7 +13,7 @@ export const ProjectsData = [
         image: SwiftCart,
         stack: ["NodeJs", "ReactJs", "ExpressJs", "Tailwind"],
         gitLink: "https://github.com/rodgers-munene/swiftcart",
-        liveLink: "https://swiftcart-alei.onrender.com"
+        liveLink: "https://swiftcart-oxor.vercel.app/"
     },
     {
         title: "Event Management System",
@@ -22,7 +22,7 @@ export const ProjectsData = [
         image: Event,
         stack: ["NodeJs", "ReactJs", "ExpressJs"],
         gitLink: "https://github.com/monicahwamuhu2/Event-Management-System-Grp-16",
-        liveLink: ""
+        liveLink: "https://github.com/monicahwamuhu2/Event-Management-System-Grp-16"
 
     },
     {
@@ -32,7 +32,7 @@ export const ProjectsData = [
         image: FilmSage,
         stack: ["Framer", "ReactJs", "TypeScript", "Tailwind"],
         gitLink: "https://github.com/rodgers-munene/filmsage",
-        liveLink: ""
+        liveLink: "https://github.com/rodgers-munene/filmsage"
 
     },
     {
@@ -42,7 +42,7 @@ export const ProjectsData = [
         image: Portfolio,
         stack: ["ReactJs", "JavaScript", "Tailwind"],
         gitLink: "https://github.com/rodgers-munene/portfolio-final",
-        liveLink: ""
+        liveLink: "https://github.com/rodgers-munene/portfolio-final"
 
     },
     {
@@ -52,7 +52,7 @@ export const ProjectsData = [
         image: Chat,
         stack: ["ReactJs", "NodeJs", "Tailwind", "Socket-io"],
         gitLink: "https://github.com/rodgers-munene",
-        liveLink: ""
+        liveLink: "https://github.com/rodgers-munene"
     },
     
 ]
