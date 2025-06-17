@@ -39,7 +39,7 @@ const Header = () => {
           </button>
 
     
-          <div className={`absolute right-0 transition-tranform duration-500 ${isHamMenu? "top-12": "-top-52"}`}>
+          <div className={`absolute right-0 transition-tranform duration-500 ${isHamMenu? "top-12": "-top-56"}`}>
             <Hamburger />
           </div>
         </div>
