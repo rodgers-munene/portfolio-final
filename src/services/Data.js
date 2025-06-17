@@ -106,7 +106,7 @@ export const funFacts = [
   "I love playing BasketBall",
   "Favourite Meal - Anything that involves Chapati",
   "I love creating - I love fixing bugs",
-  "Favourite Show - Attack on Titans",
+  "Favourite Show - Attack on Titan",
   "I love networking and meeting new people",
   "I value clear communication"
 ]
