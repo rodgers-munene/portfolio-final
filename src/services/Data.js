@@ -1,6 +1,6 @@
 import SwiftCart from '../assets/swiftCart.png'
 import Event from '../assets/EventSystem.png'
-import FilmSage from '../assets/FilmSage.png'
+import FilmSage from '../assets/filmsage.jpeg'
 import Portfolio from '../assets/portfolio.png'
 import Chat from '../assets/Chat.png'
 
@@ -16,6 +16,16 @@ export const ProjectsData = [
         liveLink: "https://swiftcart-oxor.vercel.app/"
     },
     {
+        title: "FilmSage",
+        description: "an intelligent movie recommendation android application designed to help users discover their next favorite movie.",
+        shortDesc: "Movie Recommendation System",
+        image: FilmSage,
+        stack: ["Expo", "React-Native", "TypeScript", "NativeWind"],
+        gitLink: "https://github.com/rodgers-munene/filmsage-mobile",
+        liveLink: "https://github.com/rodgers-munene/filmsage-mobile"
+
+    },
+    {
         title: "Event Management System",
         description: "A modern, responsive Event Management System built with React and Vite.",
         shortDesc: "Manage Your Events",
@@ -23,16 +33,6 @@ export const ProjectsData = [
         stack: ["NodeJs", "ReactJs", "ExpressJs"],
         gitLink: "https://github.com/monicahwamuhu2/Event-Management-System-Grp-16",
         liveLink: "https://github.com/monicahwamuhu2/Event-Management-System-Grp-16"
-
-    },
-    {
-        title: "FilmSage",
-        description: "an intelligent movie recommendation system designed to help users discover their next favorite movie.",
-        shortDesc: "Movie Recommendation System",
-        image: FilmSage,
-        stack: ["Framer", "ReactJs", "TypeScript", "Tailwind"],
-        gitLink: "https://github.com/rodgers-munene/filmsage",
-        liveLink: "https://github.com/rodgers-munene/filmsage"
 
     },
     {

@@ -1,13 +1,14 @@
 import { useRef, useState } from "react";
+import { motion } from "framer-motion";
 import { FaLinkedin, FaDiscord } from "react-icons/fa";
 import { Mail } from "lucide-react";
-import emailjs from 'emailjs-com'
+import emailjs from 'emailjs-com';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  const formRef = useRef(null)
+  const formRef = useRef(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -15,19 +16,18 @@ const ContactSection = () => {
   };
 
   const handleSubmit = (e) => {
-  e.preventDefault();
-  setIsSubmitting(true);
+    e.preventDefault();
+    setIsSubmitting(true);
 
-  emailjs.sendForm(
-      'service_0euws8i', //service id    
-      'template_cyrabjn', //template id
-      formRef.current,       // form reference
-      'vGinEVgiEiBEPcOFP'   // public key
+    emailjs.sendForm(
+      'service_0euws8i',
+      'template_cyrabjn',
+      formRef.current,
+      'vGinEVgiEiBEPcOFP'
     ).then(() => {
       setIsSubmitting(false);
       setSubmitted(true);
       setFormData({ name: "", email: "", message: "" });
-
       setTimeout(() => setSubmitted(false), 4000);
     })
     .catch((error) => {
@@ -35,7 +35,7 @@ const ContactSection = () => {
       setIsSubmitting(false);
       alert("Failed to send message. Please try again.");
     });
-};
+  };
 
   return (
     <div className="w-full sm:w-[90vw] max-w-7xl mx-auto px-4 py-6 md:py-8 lg:py-10">
@@ -50,8 +50,8 @@ const ContactSection = () => {
         {/* Left Section */}
         <div className="w-full md:w-1/2 text-gray-300 text-sm">
           <p className="mb-6">
-            I’m open to freelance opportunities. However, if you have any other
-            questions or just want to connect, don’t hesitate to reach out.
+            I'm open to freelance opportunities. However, if you have any other
+            questions or just want to connect, don't hesitate to reach out.
           </p>
 
           <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
@@ -78,6 +78,7 @@ const ContactSection = () => {
                 value={formData.email}
                 onChange={handleChange}
                 className="w-full px-3 py-2 bg-transparent border border-gray-600 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-[#C778DD]"
+                
               />
             </div>
 
@@ -94,39 +95,80 @@ const ContactSection = () => {
               ></textarea>
             </div>
 
-            <button
+            <motion.button
               type="submit"
               disabled={isSubmitting}
-              className="px-6 py-2 bg-[#C778DD] text-white rounded-md hover:bg-opacity-80 transition-colors"
+              className="px-6 py-2 bg-[#C778DD] text-white rounded-md relative overflow-hidden"
+              whileHover={{
+                backgroundColor: "rgba(199, 120, 221, 0.9)",
+                boxShadow: "0 0 15px rgba(199, 120, 221, 0.5)"
+              }}
+              whileTap={{ scale: 0.98 }}
             >
               {isSubmitting ? "Sending..." : "Send Message"}
-            </button>
+              {isSubmitting && (
+                <motion.span
+                  className="absolute bottom-0 left-0 h-1 bg-white"
+                  initial={{ width: 0 }}
+                  animate={{ width: "100%" }}
+                  transition={{ duration: 2 }}
+                />
+              )}
+            </motion.button>
 
             {submitted && (
-              <p className="text-green-400 text-sm mt-2">Message sent successfully!</p>
+              <motion.p 
+                className="text-green-400 text-sm mt-2"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+              >
+                Message sent successfully!
+              </motion.p>
             )}
           </form>
         </div>
 
         {/* Right Contact Card */}
-        <div className="w-full md:w-64 border border-gray-600 px-4 py-3 text-sm text-white">
+        <motion.div 
+          className="w-full md:w-64 border border-gray-600 px-4 py-3 text-sm text-white bg-[#1A1A1A] rounded-md"
+          whileHover={{
+            borderColor: "#C778DD",
+            boxShadow: "0 0 20px rgba(199, 120, 221, 0.2)"
+          }}
+        >
           <h3 className="mb-3 font-semibold">Message me here</h3>
 
-          <div className="flex items-center mb-2">
-            <FaDiscord className="w-6 h-6" />
-            <p className="text-gray-400 ml-2">rodgers.dev</p>
-          </div>
+          <motion.div 
+            className="flex items-center mb-2 group"
+            whileHover={{ color: "#C778DD" }}
+          >
+            <motion.div whileHover={{ scale: 1.1 }}>
+              <FaDiscord className="w-6 h-6 text-[#5865F2] group-hover:text-[#5865F2]" />
+            </motion.div>
+            <p className="text-gray-400 ml-2 group-hover:text-white">rodgers.dev</p>
+          </motion.div>
 
-          <div className="flex items-center mb-2">
-            <Mail />
-            <p className="text-gray-400 ml-2">munenerodgers72@gmail.com</p>
-          </div>
+          <motion.div 
+            className="flex items-center mb-2 group"
+            whileHover={{ color: "#C778DD" }}
+          >
+            <motion.div whileHover={{ scale: 1.1 }}>
+              <Mail className="text-[#C778DD]" />
+            </motion.div>
+            <p className="text-gray-400 ml-2 group-hover:text-white">munenerodgers72@gmail.com</p>
+          </motion.div>
 
-          <div className="flex items-center">
-            <FaLinkedin className="w-6 h-6" />
-            <p className="text-gray-400 ml-2">rodgers-munene-19558135b</p>
-          </div>
-        </div>
+          <motion.div 
+            className="flex items-center group"
+            whileHover={{ color: "#C778DD" }}
+          >
+            <motion.div whileHover={{ scale: 1.1 }}>
+              <FaLinkedin className="w-6 h-6 text-[#0077B5]" />
+            </motion.div>
+            <p className="text-gray-400 ml-2 group-hover:text-white">rodgers-munene-19558135b</p>
+          </motion.div>
+        </motion.div>
       </div>
     </div>
   );

@@ -2,32 +2,58 @@ import outline from "../../assets/outline.png";
 import hacker from "../../assets/hackerNoBg.png";
 import dots from "../../assets/Dots.svg";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+
+const containerVariants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
 
 const Hero = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   return (
-    <div className="w-full px-4 sm:px-0 sm:w-[90vw] max-w-7xl flex flex-col sm:flex-row h-auto sm:h-80 border-pink-500 mt-8 sm:mt-14 justify-between">
+    <motion.div
+      className="w-full px-4 sm:px-0 sm:w-[90vw] max-w-7xl flex flex-col sm:flex-row h-auto sm:h-80 mt-8 sm:mt-14 justify-between"
+      variants={containerVariants}
+      initial="hidden"
+      animate="show"
+    >
       {/* intro section */}
       <div className="w-full sm:w-1/2 min-h-full flex flex-col items-center sm:items-start text-center sm:text-left">
-        <h1 className="text-white font-bold text-base sm:text-lg lg:text-2xl">
+        <motion.h1
+          variants={fadeUp}
+          className="text-white font-bold text-base sm:text-lg lg:text-2xl"
+        >
           Rodgers is a{" "}
           <span className="text-[#C778DD]">Software Developer</span> and a{" "}
           <span className="text-[#C778DD]">Design Specialist</span>
-        </h1>
+        </motion.h1>
 
-        <p className="text-gray-300 mt-4 sm:mt-7 max-w-md text-sm sm:text-base lg:text-lg">
+        <motion.p
+          variants={fadeUp}
+          className="text-gray-300 mt-4 sm:mt-7 max-w-md text-sm sm:text-base lg:text-lg"
+        >
           He develops scalable, user-centric solutions with clean architecture
           and thoughtful interfaces
-        </p>
+        </motion.p>
 
-        <button
-        onClick={() => {
-          navigate('/contact-me')
-        }}
-         className="border border-[#C778DD] text-white px-3 py-1 mt-5 sm:mt-7 hover:bg-[#C778DD] hover:bg-opacity-10 transition-colors text-sm sm:text-base lg:text-lg">
+        <motion.button
+          variants={fadeUp}
+          onClick={() => navigate("/contact-me")}
+          className="border border-[#C778DD] text-white px-3 py-1 mt-5 sm:mt-7 hover:bg-[#C778DD] hover:bg-opacity-10 transition-colors text-sm sm:text-base lg:text-lg"
+        >
           Contact me!!
-        </button>
+        </motion.button>
       </div>
 
       {/* image section */}
@@ -39,30 +65,38 @@ const Hero = () => {
           className="absolute top-5 left-5 sm:left-14 w-12 sm:w-20 lg:w-24"
         />
 
-        {/* hacker image */}
-        <img
+        {/* hacker image with subtle float */}
+        <motion.img
           src={hacker}
           alt="hacker"
           className="w-full max-w-[18rem] sm:max-w-[24rem] lg:max-w-[28rem]"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
         />
 
         {/* dots image */}
         <img
           src={dots}
-          alt="outline"
+          alt="dots"
           className="absolute bottom-10 sm:top-32 md:top-24 right-0 w-8 sm:w-10 lg:w-12"
         />
 
-        {/* project working on */}
-        <div className="flex border border-gray-500 items-center mt-5 sm:mt-0 px-2 py-1">
+        {/* project working on - bounce in */}
+        <motion.div
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ delay: 1.2, duration: 0.5, ease: "easeOut" }}
+          className="flex border border-gray-500 items-center mt-5 sm:mt-0 px-2 py-1"
+        >
           <div className="w-3 h-3 sm:w-5 sm:h-5 bg-[#C778DD]"></div>
           <p className="ml-2 text-gray-400 text-xs sm:text-sm">
             Currently working on{" "}
             <span className="text-white">Web Chat Application</span>
           </p>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
