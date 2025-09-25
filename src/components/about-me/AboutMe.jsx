@@ -96,7 +96,7 @@ const AboutMe = () => {
               className="text-white font-medium"
               whileHover={{ color: "#C778DD" }}
             >
-              computer science student
+              Computer Science student
             </motion.span>{" "}
             and self-driven{" "}
             <motion.span
@@ -109,23 +109,68 @@ const AboutMe = () => {
           </motion.p>
 
           <motion.p className="text-gray-300 text-sm md:text-base" variants={textItem}>
-            Crafting digital solutions—from intuitive UIs to secure backend
-            systems—has been my passion for years. I've developed real-world
-            projects like{" "}
+            My journey in tech started with curiosity and has grown into a
+            passion for building impactful solutions. I enjoy taking ideas from
+            concept to deployment, whether it’s sleek, responsive UIs or secure,
+            scalable backends.
+          </motion.p>
+
+          <motion.p className="text-gray-300 text-sm md:text-base" variants={textItem}>
+            Some of my projects include{" "}
             <motion.strong
               className="text-[#C778DD]"
               whileHover={{ scale: 1.05 }}
             >
-              SwiftCart
-            </motion.strong>
-            , an e-commerce platform with M-Pesa integration, and{" "}
+              SwiftCart,
+            </motion.strong>{" "}
+            an e-commerce app built with react and node.js,{" "}
             <motion.strong
               className="text-[#C778DD]"
               whileHover={{ scale: 1.05 }}
             >
-              FilmSage
+              FilmSage,
+            </motion.strong>{" "}
+            a movie recommendation system, and{" "}
+            <motion.strong
+              className="text-[#C778DD]"
+              whileHover={{ scale: 1.05 }}
+            >
+              AgroTrack+,
+            </motion.strong>{" "}
+            a React Native mobile app that helps farmers track crops and
+            optimize farming decisions.
+          </motion.p>
+
+          <motion.p className="text-gray-300 text-sm md:text-base" variants={textItem}>
+            I also{" "}
+            <motion.strong
+              className="text-[#C778DD]"
+              whileHover={{ scale: 1.05 }}
+            >
+              co-founded EkShop
             </motion.strong>
-            , a smart movie recommendation tool.
+            , an e-commerce platform based in Nyeri tailored for students and
+            locals. EkShop has already onboarded{" "}
+            <span className="text-white font-medium">150+ users</span> and
+            manages{" "}
+            <span className="text-white font-medium">15+ deliveries daily</span>,
+            proving the demand for student-centered delivery solutions.
+          </motion.p>
+
+          <motion.p className="text-gray-300 text-sm md:text-base" variants={textItem}>
+            I’m skilled in{" "}
+            <span className="text-white font-medium">
+              React, Node.js, Tailwind CSS, PostgreSQL
+            </span>{" "}
+            and always exploring new tech. I thrive in collaborative environments
+            like{" "}
+            <span className="text-white font-medium">hackathons</span> and enjoy
+            tackling problems that matter to people.
+          </motion.p>
+
+          <motion.p className="text-gray-300 text-sm md:text-base" variants={textItem}>
+            Beyond coding, I’m driven by a vision to create tools that make
+            everyday life easier and more connected.
           </motion.p>
         </motion.div>
 
