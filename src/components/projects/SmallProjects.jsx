@@ -112,9 +112,7 @@ const SmallProjects = () => {
                 <motion.div 
                   className="h-1 bg-gradient-to-r from-[#C778DD] to-purple-400 rounded-full mt-2"
                 />
-                <p className="text-gray-400 mt-3 text-lg">
-                  Quick experiments and useful utilities
-                </p>
+                
               </div>
             </motion.div>
 
@@ -233,7 +231,7 @@ const SmallProjects = () => {
         <motion.div 
           className="mt-20 text-center"
         >
-          <div className="inline-flex items-center gap-4 text-gray-500 bg-gray-800/30 px-6 py-3 rounded-full border border-gray-700/50">
+          <div className="w-full inline-flex items-center gap-4 text-gray-500 bg-gray-800/30 px-6 py-3 rounded-full border border-gray-700/50">
             <div className="h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent w-16" />
             <span className="text-sm whitespace-nowrap">More experiments in progress</span>
             <div className="h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent w-16" />

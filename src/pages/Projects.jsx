@@ -10,7 +10,7 @@ const Projects = () => {
   }, [location.pathname])
 
   return (
-    <div className='min-h-screen'>
+    <div className='min-h-screen w-screen'>
         {/* title */}
         <div className='w-full sm:w-[90vw] mt-6 max-w-7xl mx-auto px-4 py-6'>
             <h1 className='text-white text-4xl font-medium'><span className='text-[#C778DD]'>/</span>projects</h1>

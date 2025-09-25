@@ -12,7 +12,7 @@ const ProjectsSection = () => {
   return (
     <div className="min-h-screen">
       <div 
-        className="w-full sm:w-[95vw] max-w-7xl mx-auto px-6 py-12"
+        className="w-screen sm:w-[95vw] max-w-7xl mx-auto px-6 py-12"
       >
         {/* Enhanced title section */}
         <div className="mb-16 relative">
