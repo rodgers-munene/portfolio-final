@@ -71,7 +71,7 @@ const ProjectsSection = () => {
               <p className="text-sm text-gray-400 mb-4 flex-1">{project.shortDesc}</p>
 
               <div className="flex gap-2 mt-auto">
-                {index === 0 && (
+                {index !== 1 && (
                   <Link
                     to={project.liveLink}
                     target="_blank"
@@ -80,13 +80,15 @@ const ProjectsSection = () => {
                     Live <ArrowRightLeft className="ml-2" size={14} />
                   </Link>
                 )}
-                <Link
+                {index !== 0 && (
+                  <Link
                   to={project.gitLink}
                   target="_blank"
                   className="flex items-center text-sm border border-[#C778DD] text-[#C778DD] hover:bg-gray-700 hover:border-gray-700 hover:text-white! py-2 px-4 rounded transition-colors"
                 >
                   Code <FaGithub className="ml-2" size={14} />
                 </Link>
+                )}
               </div>
             </div>
           </motion.div>
