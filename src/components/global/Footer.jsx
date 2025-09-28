@@ -53,7 +53,7 @@ const Footer = () => {
       </div>
       <div className="w-full flex justify-center mt-5 sm:mt-0">
         <p className="text-gray-300 mb-5 text-sm sm:text-base">
-          © Copyright 2022. Rodgers Munene.
+          © Copyright 2025. Rodgers Munene.
         </p>
       </div>
     </div>

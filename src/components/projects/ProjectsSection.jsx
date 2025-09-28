@@ -161,12 +161,12 @@ const ProjectsSection = () => {
 
         {/* Bottom decoration */}
         <div 
-          className="mt-20 flex justify-center"
+          className="w-full mt-20 flex justify-center"
         >
-          <div className="flex items-center gap-4 text-gray-500">
-            <div className="h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent w-32" />
-            <span className="text-sm">More projects coming soon</span>
-            <div className="h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent w-32" />
+          <div className="flex items-center gap-4 text-gray-500 border h-12 rounded-3xl">
+            <div className="ml-3 h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent w-16" />
+            <span className="text-sm">More projects coming</span>
+            <div className="mr-3 h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent w-16" />
           </div>
         </div>
       </div>

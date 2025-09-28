@@ -228,15 +228,15 @@ const SmallProjects = () => {
         </motion.div>
 
         {/* Bottom section */}
-        <motion.div 
-          className="mt-20 text-center"
+        <div 
+          className="w-full flex justify-center mt-20 text-center"
         >
-          <div className="w-full inline-flex items-center gap-4 text-gray-500 bg-gray-800/30 px-6 py-3 rounded-full border border-gray-700/50">
+          <div className=" inline-flex items-center gap-4 text-gray-500 bg-gray-800/30 px-6 py-3 rounded-full border border-gray-700/50">
             <div className="h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent w-16" />
-            <span className="text-sm whitespace-nowrap">More experiments in progress</span>
+            <span className="text-sm whitespace-nowrap">More experiments in the lab</span>
             <div className="h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent w-16" />
           </div>
-        </motion.div>
+        </div>
       </motion.div>
     </div>
   );

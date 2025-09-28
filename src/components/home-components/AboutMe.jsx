@@ -159,15 +159,15 @@ const AboutMe = () => {
               className="text-white font-medium"
               whileHover={{ color: "#C778DD" }}
             >
-              computer scientist
+              Software Engineer 
             </motion.span>{" "}
-            and self-driven{" "}
+            {/* and self-driven{" "}
             <motion.span
               className="text-white font-medium"
               whileHover={{ color: "#C778DD" }}
             >
-              full-stack developer
-            </motion.span>{" "}
+              full-stack developer */}
+            {/* </motion.span>{" "} */}
             from Kenya.
           </motion.p>
 
@@ -175,23 +175,23 @@ const AboutMe = () => {
             className="text-gray-300 text-sm md:text-base"
             variants={textItem}
           >
-            Crafting digital solutions—from intuitive UIs to secure backend
-            systems—has been my passion for years. I've developed real-world
+            Crafting digital solutions, from intuitive UIs to secure backend
+            systems, has been my passion for years. I've developed real-world
             projects like{" "}
             <motion.strong
               className="text-[#C778DD]"
               whileHover={{ scale: 1.05 }}
             >
-              SwiftCart
+              <a href="ekshop.store">ekshop.store</a>
             </motion.strong>
-            , an e-commerce platform with M-Pesa integration, and{" "}
+            , an e-commerce platform built to serve students and locals around Nyeri, and{" "}
             <motion.strong
               className="text-[#C778DD]"
               whileHover={{ scale: 1.05 }}
             >
-              FilmSage
+              Agrotrack
             </motion.strong>
-            , a smart movie recommendation tool.
+            , a mobile app built to support farmers by providing tools for crop monitoring, soil health tracking, pest detection, and weather updates
           </motion.p>
 
           <motion.button

@@ -96,14 +96,7 @@ const AboutMe = () => {
               className="text-white font-medium"
               whileHover={{ color: "#C778DD" }}
             >
-              Computer Science student
-            </motion.span>{" "}
-            and self-driven{" "}
-            <motion.span
-              className="text-white font-medium"
-              whileHover={{ color: "#C778DD" }}
-            >
-              full-stack developer
+              Software Engineer
             </motion.span>{" "}
             from Kenya.
           </motion.p>
@@ -123,14 +116,7 @@ const AboutMe = () => {
             >
               SwiftCart,
             </motion.strong>{" "}
-            an e-commerce app built with react and node.js,{" "}
-            <motion.strong
-              className="text-[#C778DD]"
-              whileHover={{ scale: 1.05 }}
-            >
-              FilmSage,
-            </motion.strong>{" "}
-            a movie recommendation system, and{" "}
+            an e-commerce app built with react and node.js, and{" "}
             <motion.strong
               className="text-[#C778DD]"
               whileHover={{ scale: 1.05 }}
@@ -147,7 +133,7 @@ const AboutMe = () => {
               className="text-[#C778DD]"
               whileHover={{ scale: 1.05 }}
             >
-              co-founded EkShop
+              co-founded <a href="ekshop.store">EkShop</a>
             </motion.strong>
             , an e-commerce platform based in Nyeri tailored for students and
             locals. EkShop has already onboarded{" "}

@@ -39,7 +39,7 @@ export const ProjectsData = [
   {
     title: "FilmSage",
     description:
-      "an intelligent movie recommendation android application designed to help users discover their next favorite movie.",
+      "A movie recommendation android application designed to help users discover their next favorite movie.",
     shortDesc: "Movie Recommendation System",
     image: FilmSage,
     stack: ["Expo", "React-Native", "TypeScript", "NativeWind"],
@@ -79,29 +79,29 @@ export const ProjectsData = [
 
 export const smallProjects = [
   {
-    stack: ["Java", "XML"],
-    title: "Ecommerce Mobile",
-    description: "A mobile ecommerce app built on Java",
-    gitLink: "https://github.com/rodgers-munene/e-commerce-mobile",
+    stack: ["Flutter", "Dart"],
+    title: "Flutter Movie App",
+    description: "A movie app I built with dart and flutter to practive flutter ui",
+    gitLink: "https://github.com/rodgers-munene/movie-app",
   },
   {
     stack: ["Web3", "NodeJs", "ReactJs"],
-    title: "Asset Management App",
-    description: "Web3 Asset management system",
+    title: "A waste Management system",
+    description: "A project built on PHP HTML CSS AND JAVASCRIPT for Nyeri waste collection",
     gitLink: "https://github.com/rodgers-munene/MyAsset",
   },
   {
-    stack: ["php", "VanillaJs", "HTML", "CSS"],
-    title: "KLIN",
+    stack: ["python", "math", "statistics"],
+    title: "A trading Algorithm",
     description: "Waste Management system",
-    gitLink: "https://github.com/rodgers-munene/KLIN-Waste-Management",
+    gitLink: "https://github.com/DylanSiegel/Trading-Algo",
   },
 ];
 
 export const skillsData = [
   {
     title: "Languages",
-    details: ["Java", "JavaScript", "Python", "TypeScript", "Kotlin"],
+    details: ["Java", "JavaScript", "Python", "TypeScript", "Dart"],
   },
   {
     title: "Databases",
@@ -113,11 +113,11 @@ export const skillsData = [
   },
   {
     title: "Tools",
-    details: ["VSCode", "Android Studio", "Linux", "Anaconda", "Github"],
+    details: ["VSCode", "Android Studio", "Linux", "Docker", "Github"],
   },
   {
     title: "Frameworks",
-    details: ["React", "Springboot", "Django", "NodeJs", "ExpressJs"],
+    details: ["React", "React-Native", "NodeJs", "ExpressJs", "Flutter"],
   },
 ];
 

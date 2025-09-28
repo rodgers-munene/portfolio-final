@@ -34,17 +34,17 @@ const Hero = () => {
           variants={fadeUp}
           className="text-white font-bold text-base sm:text-lg lg:text-2xl"
         >
-          Rodgers is a{" "}
-          <span className="text-[#C778DD]">Software Developer</span> and a{" "}
-          <span className="text-[#C778DD]">Design Specialist</span>
+          {" "}
+          <span className="text-[#C778DD]">Software Developer</span>,{" "}
+          <span className="text-[#C778DD]">Designer</span>, and a {" "}
+          <span className="text-[#C778DD]">Problem Solver</span>
         </motion.h1>
 
         <motion.p
           variants={fadeUp}
           className="text-gray-300 mt-4 sm:mt-7 max-w-md text-sm sm:text-base lg:text-lg"
         >
-          He develops scalable, user-centric solutions with clean architecture
-          and thoughtful interfaces
+          Turning ideas into scalable solutions, with clean architecture and interfaces that just click.
         </motion.p>
 
         <motion.button
@@ -92,7 +92,7 @@ const Hero = () => {
           <div className="w-3 h-3 sm:w-5 sm:h-5 bg-[#C778DD]"></div>
           <p className="ml-2 text-gray-400 text-xs sm:text-sm">
             Currently working on{" "}
-            <span className="text-white">Web Chat Application</span>
+            <span className="text-white">Agrotrack</span>
           </p>
         </motion.div>
       </div>

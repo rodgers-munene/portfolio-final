@@ -178,6 +178,7 @@ const Skills = () => {
               <div className="flex flex-wrap gap-1">
                 {item.details.map((data, i) => (
                   <span
+                    key={i}
                     className="text-sm md:text-base text-[#ABB2BF] bg-[#1E2227] px-3 py-1 rounded"
                   >
                     {data}
