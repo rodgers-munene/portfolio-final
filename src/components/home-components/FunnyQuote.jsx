@@ -11,7 +11,7 @@ const FunnyQuote = () => {
 
           {/* Quote Text */}
           <p className="text-sm sm:text-base md:text-lg font-mono">
-            With great power comes great electricity bill
+            To obtain, something of equal value must be lost
           </p>
 
           {/* Closing Quote + Author */}
@@ -19,7 +19,7 @@ const FunnyQuote = () => {
         <div className="flex justify-end items-center mt-4 space-x-2">
           <span className="text-xl text-gray-500">”</span>
           <p className="text-xs sm:text-sm md:text-base text-gray-400">
-            - Dr. Who
+            - Hiromu Arakawa
           </p>
         </div>
       </div>

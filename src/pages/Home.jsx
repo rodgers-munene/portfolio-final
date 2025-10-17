@@ -11,9 +11,9 @@ const Home = () => {
     <div className='min-h-screen'>
         <Hero />
         <FunnyQuote />
+        <AboutMe />
         <ProjectsSection />
         <Skills />
-        <AboutMe />
         <ContactMe />
     </div>
   )
