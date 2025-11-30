@@ -4,6 +4,7 @@ import ProjectsSection from '../components/home-components/ProjectsHome'
 import Skills from '../components/home-components/Skills'
 import AboutMe from '../components/home-components/AboutMe'
 import ContactMe from '../components/home-components/ContactMe'
+import EducationSection from '../components/home-components/EducationSection'
 
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
         <Hero />
         <FunnyQuote />
         <AboutMe />
+        <EducationSection />
         <ProjectsSection />
         <Skills />
         <ContactMe />

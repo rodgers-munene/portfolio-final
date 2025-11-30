@@ -25,7 +25,7 @@ const Header = () => {
         }}
          className='flex cursor-pointer'>
             <img src={logo} alt="logo" className='w-8 h-8'/>
-            <h1 className='ml-4 text-white font-medium'>Rodgers</h1>
+            <h1 className='ml-4 text-white font-medium'>Rodgers <span className='text-[#C778DD]'>Munene</span></h1>
         </div>
         <div className='md:w-1/2 lg:w-1/3 hidden md:block'>
             <Navbar />

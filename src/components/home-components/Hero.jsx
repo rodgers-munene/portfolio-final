@@ -1,6 +1,7 @@
 import outline from "../../assets/outline.png";
 import hacker from "../../assets/hackerNoBg.png";
 import dots from "../../assets/Dots.svg";
+import myResume from "../../assets/rodgers_munene_CV.pdf";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -36,7 +37,7 @@ const Hero = () => {
         >
           {" "}
           <span className="text-[#C778DD]">Software Developer</span>,{" "}
-          <span className="text-[#C778DD]">Designer</span>, and a {" "}
+          <span className="text-[#C778DD]">Designer</span>, and a{" "}
           <span className="text-[#C778DD]">Problem Solver</span>
         </motion.h1>
 
@@ -44,16 +45,28 @@ const Hero = () => {
           variants={fadeUp}
           className="text-gray-300 mt-4 sm:mt-7 max-w-md text-sm sm:text-base lg:text-lg"
         >
-          Turning ideas into scalable solutions, with clean architecture and interfaces that just click.
+          Turning ideas into scalable solutions, with clean architecture and
+          interfaces that just click.
         </motion.p>
 
-        <motion.button
-          variants={fadeUp}
-          onClick={() => navigate("/contact-me")}
-          className="border border-[#C778DD] text-white px-3 py-1 mt-5 sm:mt-7 hover:bg-[#C778DD] hover:bg-opacity-10 transition-colors text-sm sm:text-base lg:text-lg"
-        >
-          Contact me!!
-        </motion.button>
+        <div className="flex gap-x-3">
+          <motion.button
+            variants={fadeUp}
+            onClick={() => navigate("/contact-me")}
+            className="border border-[#C778DD] text-white px-3 py-1 mt-5 sm:mt-7 hover:bg-[#C778DD] hover:bg-opacity-10 transition-colors text-sm sm:text-base lg:text-lg"
+          >
+            Hire Me!
+          </motion.button>
+          <motion.a
+            href={myResume}
+            download="rodgers_munene_CV.pdf"
+            variants={fadeUp}
+          >
+            <button className="border border-[#C778DD] text-white px-3 py-1 mt-5 sm:mt-7 hover:bg-[#C778DD] hover:bg-opacity-10 transition-colors text-sm sm:text-base lg:text-lg">
+              Download CV
+            </button>
+          </motion.a>
+        </div>
       </div>
 
       {/* image section */}
@@ -91,8 +104,7 @@ const Hero = () => {
         >
           <div className="w-3 h-3 sm:w-5 sm:h-5 bg-[#C778DD]"></div>
           <p className="ml-2 text-gray-400 text-xs sm:text-sm">
-            Currently working on{" "}
-            <span className="text-white">Agrotrack</span>
+            Currently working on <span className="text-white">Agrotrack</span>
           </p>
         </motion.div>
       </div>
