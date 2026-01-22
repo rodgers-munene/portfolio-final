@@ -118,7 +118,7 @@ const Skills = () => {
       <div className="w-full flex flex-col lg:flex-row gap-6 md:gap-8">
         {/* Crazy graphic container */}
         <motion.div 
-          className="w-full lg:w-2/5 h-64 min-h-44 relative bg-[#282C33] p-4 rounded-md overflow-hidden"
+          className="w-full lg:w-2/5 h-64 min-h-44 relative p-4 rounded-md overflow-hidden"
           variants={graphicItem}
           whileHover={{ scale: 1.02 }}
         >
@@ -167,7 +167,7 @@ const Skills = () => {
           {skillsData.map((item, index) => (
             <motion.div 
               key={index}
-              className="bg-[#282C33] p-4 rounded-md border border-transparent hover:border-[#C778DD]"
+              className="bg-[#1A1A1A] p-4 rounded-md border border-transparent hover:border-[#C778DD]"
               variants={skillCard}
               custom={index}
               whileHover="hover"

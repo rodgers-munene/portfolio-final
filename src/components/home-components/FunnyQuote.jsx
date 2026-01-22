@@ -5,7 +5,7 @@ const FunnyQuote = () => {
       <div className="flex flex-col items-end">
         <div className="relative max-w-xl border border-gray-600 p-6 text-center">
           {/* Quote */}
-          <span className="absolute h-7 -top-3 left-4 text-5xl text-gray-500 bg-[#282C33]">
+          <span className="absolute h-7 -top-3 left-4 text-5xl text-gray-500">
             “
           </span>
 
