@@ -1,7 +1,7 @@
 import outline from "../../assets/outline.png";
 import hacker from "../../assets/hackerNoBg.png";
 import dots from "../../assets/Dots.svg";
-import myResume from "../../assets/rodgers_munene_CV.pdf";
+import myResume from "../../assets/RodgersMunene_resume.pdf";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 

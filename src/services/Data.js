@@ -34,7 +34,7 @@ export const ProjectsData = [
     image: SwiftCart,
     stack: ["NodeJs", "ReactJs", "ExpressJs", "Tailwind"],
     gitLink: "https://github.com/rodgers-munene/swiftcart",
-    liveLink: "https://swiftcart-oxor.vercel.app/",
+    // liveLink: "https://swiftcart-oxor.vercel.app/",
   },
   {
     title: "FilmSage",
