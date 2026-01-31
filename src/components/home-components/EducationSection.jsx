@@ -130,7 +130,7 @@ const EducationSection = () => {
           variants={fadeUpVariant}
           className="relative mt-8"
         >
-          <div className="hidden md:flex absolute left-0 top-3 w-[60px] items-center justify-center">
+          {/* <div className="hidden md:flex absolute left-0 top-3 w-[60px] items-center justify-center">
             <div className="w-4 h-4 rounded-full bg-[#C778DD] animate-pulse border-4 border-[#0D0D0D] z-10"></div>
           </div>
           
@@ -139,7 +139,7 @@ const EducationSection = () => {
               <span className="w-2 h-2 rounded-full bg-[#C778DD] animate-pulse"></span>
               Currently pursuing degree - Expected graduation 2026
             </p>
-          </div>
+          </div> */}
         </motion.div>
       </div>
     </section>
