@@ -91,13 +91,24 @@ const ProjectsSection = () => {
               exit="exit"
               variants={fadeUpVariant}
               onClick={() => setSelectedProject(project)} // 1. CLICK TO OPEN MODAL
-              className="cursor-pointer border border-[#2C2C2C] bg-[#1A1A1A] rounded-xl p-6 hover:shadow-[0_0_15px_-5px_rgba(199,120,221,0.15)] hover:border-[#C778DD]/50 transition-all duration-300 flex flex-col justify-between group"
+              className="cursor-pointer border border-[#2C2C2C] bg-[#1A1A1A] rounded-xl overflow-hidden hover:shadow-[0_0_15px_-5px_rgba(199,120,221,0.15)] hover:border-[#C778DD]/50 transition-all duration-300 flex flex-col justify-between group"
             >
-              
-              <div className="flex justify-between items-start mb-4">
-                <div className="p-3 bg-[#2C2C2C]/50 rounded-lg group-hover:scale-110 transition-transform duration-300">
-                  {getProjectIcon(project.title)}
-                </div>
+
+              {/* Project Image */}
+              <div className="relative overflow-hidden h-48">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A] via-transparent to-transparent" />
+              </div>
+
+              <div className="p-6">
+                <div className="flex justify-between items-start mb-4">
+                  <div className="p-3 bg-[#2C2C2C]/50 rounded-lg group-hover:scale-110 transition-transform duration-300">
+                    {getProjectIcon(project.title)}
+                  </div>
                 
                 <div className="flex gap-3 text-gray-400">
                    {project.gitLink && (
@@ -127,7 +138,7 @@ const ProjectsSection = () => {
 
               <div>
                 <h3 className="text-white font-bold text-lg mb-2">{project.title}</h3>
-                
+
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.stack.slice(0, 3).map((tech, idx) => (
                     <span key={idx} className="text-[11px] uppercase tracking-wider text-[#C778DD] bg-[#C778DD]/10 px-2 py-1 rounded">
@@ -143,6 +154,7 @@ const ProjectsSection = () => {
                   {project.description}
                 </p>
 
+              </div>
               </div>
 
             </motion.div>
