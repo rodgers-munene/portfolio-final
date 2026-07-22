@@ -7,7 +7,7 @@ const Layout = ( {children} ) => {
     <div className='w-full flex flex-col items-center'>
         <Header />
         <FloatingLinks />
-        <main>
+        <main className="w-full">
             {children}
         </main>
         <Footer />

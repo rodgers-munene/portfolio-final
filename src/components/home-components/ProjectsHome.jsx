@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { 
-  ExternalLink, 
-  Code2, 
-  ShoppingBag, 
-  Tractor, 
-  Film, 
-  Calendar, 
-  User, 
+import {
+  ExternalLink,
+  ArrowRight,
+  Code2,
+  ShoppingBag,
+  Tractor,
+  Film,
+  Calendar,
+  User,
   Layout,
   X // Added Close Icon
 } from "lucide-react";
@@ -28,61 +29,31 @@ const modalVariant = {
 };
 
 const ProjectsSection = () => {
-  const [activeTab, setActiveTab] = useState("all");
   const [selectedProject, setSelectedProject] = useState(null); // New State for Modal
 
-  // Helper: Categorize projects
-  const filteredProjects = ProjectsData.filter((project) => {
-    if (activeTab === "all") return true;
-    const stackString = project.stack.join(" ").toLowerCase();
-    
-    if (activeTab === "mobile") return stackString.includes("reactnative") || stackString.includes("expo") || stackString.includes("flutter") || stackString.includes("android");
-    if (activeTab === "backend") return stackString.includes("nodejs") || stackString.includes("expressjs") || stackString.includes("python") || stackString.includes("postgress");
-    if (activeTab === "web") return stackString.includes("reactjs") || stackString.includes("php");
-    return true;
-  });
-
   // Helper: Map icons
-  const getProjectIcon = (title) => {
+  const getProjectIcon = (title, size = 28) => {
     const t = title.toLowerCase();
-    if (t.includes("agro")) return <Tractor size={28} className="text-[#C778DD]" />;
-    if (t.includes("shop") || t.includes("cart")) return <ShoppingBag size={28} className="text-[#C778DD]" />;
-    if (t.includes("film") || t.includes("movie")) return <Film size={28} className="text-[#C778DD]" />;
-    if (t.includes("event")) return <Calendar size={28} className="text-[#C778DD]" />;
-    if (t.includes("portfolio")) return <User size={28} className="text-[#C778DD]" />;
-    return <Layout size={28} className="text-[#C778DD]" />;
+    if (t.includes("agro")) return <Tractor size={size} className="text-[#C778DD] flex-shrink-0" />;
+    if (t.includes("shop") || t.includes("cart")) return <ShoppingBag size={size} className="text-[#C778DD] flex-shrink-0" />;
+    if (t.includes("film") || t.includes("movie")) return <Film size={size} className="text-[#C778DD] flex-shrink-0" />;
+    if (t.includes("event")) return <Calendar size={size} className="text-[#C778DD] flex-shrink-0" />;
+    if (t.includes("portfolio")) return <User size={size} className="text-[#C778DD] flex-shrink-0" />;
+    return <Layout size={size} className="text-[#C778DD] flex-shrink-0" />;
   };
 
   return (
-    <section className="w-full sm:w-[90vw] max-w-7xl mx-auto px-4 py-12 md:py-16">
-      
-      {/* --- Header Section --- */}
-      <div className="flex flex-col gap-6 mb-12">
-        <div className="flex items-center w-full">
-          <h1 className="text-white text-2xl sm:text-3xl mr-3 flex items-center whitespace-nowrap">
-            <span className="text-[#C778DD] mr-2">#</span>projects
-          </h1>
-          <div className="hidden sm:block flex-grow max-w-lg border-b h-0 border-[#C778DD]/40"></div>
-        </div>
+    <section id="work" className="w-full sm:w-[90vw] max-w-7xl mx-auto px-4 py-12 md:py-16 scroll-mt-20">
 
-        <div className="flex flex-wrap items-center gap-4 sm:gap-8">
-          {[ { id: "all", label: "All" }, { id: "mobile", label: "Mobile" }, { id: "backend", label: "Backend" }, { id: "web", label: "Web" } ].map((tab) => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              className={`text-sm sm:text-base transition-colors relative pb-1 ${activeTab === tab.id ? "text-white font-medium" : "text-gray-500 hover:text-gray-300"}`}
-            >
-              {tab.label}
-              {activeTab === tab.id && <motion.div layoutId="activeTab" className="absolute bottom-0 left-0 w-full h-[2px] bg-[#C778DD]" />}
-            </button>
-          ))}
-        </div>
+      {/* --- Header Section --- */}
+      <div className="mb-12">
+        <p className="text-[#C778DD] text-xs sm:text-sm font-medium tracking-widest uppercase">Work</p>
       </div>
 
       {/* --- Grid Layout --- */}
-      <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <AnimatePresence mode="popLayout">
-          {filteredProjects.map((project) => (
+          {ProjectsData.map((project) => (
             <motion.div
               key={project.title}
               layout
@@ -90,71 +61,56 @@ const ProjectsSection = () => {
               animate="visible"
               exit="exit"
               variants={fadeUpVariant}
-              onClick={() => setSelectedProject(project)} // 1. CLICK TO OPEN MODAL
-              className="cursor-pointer border border-[#2C2C2C] bg-[#1A1A1A] rounded-xl overflow-hidden hover:shadow-[0_0_15px_-5px_rgba(199,120,221,0.15)] hover:border-[#C778DD]/50 transition-all duration-300 flex flex-col justify-between group"
+              onClick={() => setSelectedProject(project)}
+              whileHover={{ y: -4 }}
+              transition={{ duration: 0.25, ease: "easeOut" }}
+              className="cursor-pointer border border-[#2C2C2C] bg-[#1A1A1A] hover:border-[#C778DD]/50 transition-colors duration-300 flex flex-col gap-3 p-4 group"
             >
 
-              {/* Project Image */}
-              <div className="relative overflow-hidden h-48">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A] via-transparent to-transparent" />
-              </div>
-
-              <div className="p-6">
-                <div className="flex justify-between items-start mb-4">
-                  <div className="p-3 bg-[#2C2C2C]/50 rounded-lg group-hover:scale-110 transition-transform duration-300">
-                    {getProjectIcon(project.title)}
-                  </div>
-                
-                <div className="flex gap-3 text-gray-400">
-                   {project.gitLink && (
-                    <a 
-                      href={project.gitLink} 
-                      target="_blank" 
-                      rel="noreferrer" 
-                      onClick={(e) => e.stopPropagation()} // 2. PREVENT MODAL OPENING
-                      className="hover:text-white transition-colors p-1 hover:bg-[#2C2C2C] rounded-full"
-                    >
-                      <Code2 size={20} />
-                    </a>
-                  )}
-                  {project.liveLink && (
-                    <a 
-                      href={project.liveLink} 
-                      target="_blank" 
-                      rel="noreferrer" 
-                      onClick={(e) => e.stopPropagation()} // 2. PREVENT MODAL OPENING
-                      className="hover:text-white transition-colors p-1 hover:bg-[#2C2C2C] rounded-full"
-                    >
-                      <ExternalLink size={20} />
-                    </a>
-                  )}
+              <div className="flex items-start justify-between gap-2">
+                <div className="flex items-center gap-2.5 min-w-0">
+                  {getProjectIcon(project.title, 18)}
+                  <h3 className="text-white font-medium text-sm truncate">{project.title}</h3>
                 </div>
+
+                {project.gitLink && (
+                  <a
+                    href={project.gitLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="p-1 text-gray-500 hover:text-white transition-colors flex-shrink-0"
+                  >
+                    <Code2 size={15} />
+                  </a>
+                )}
               </div>
 
-              <div>
-                <h3 className="text-white font-bold text-lg mb-2">{project.title}</h3>
+              <p className="text-gray-400 text-xs leading-relaxed line-clamp-4">
+                {project.description}
+              </p>
 
-                <div className="flex flex-wrap gap-2 mb-4">
+              <div className="flex items-end justify-between gap-2 mt-auto pt-1">
+                <div className="flex flex-wrap gap-1">
                   {project.stack.slice(0, 3).map((tech, idx) => (
-                    <span key={idx} className="text-[11px] uppercase tracking-wider text-[#C778DD] bg-[#C778DD]/10 px-2 py-1 rounded">
+                    <span key={idx} className="text-[10px] uppercase tracking-wider text-[#C778DD] bg-[#C778DD]/10 px-1.5 py-0.5">
                       {tech}
                     </span>
                   ))}
-                  {project.stack.length > 3 && (
-                    <span className="text-[11px] text-gray-500 px-2 py-1">+{project.stack.length - 3} more</span>
-                  )}
                 </div>
 
-                <p className="text-gray-400 text-sm leading-relaxed line-clamp-3">
-                  {project.description}
-                </p>
-
-              </div>
+                {project.liveLink && (
+                  <a
+                    href={project.liveLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="group/visit inline-flex items-center gap-1 text-[#C778DD] text-xs font-medium underline underline-offset-2 flex-shrink-0 hover:gap-1.5 transition-all"
+                  >
+                    Visit
+                    <ArrowRight size={13} />
+                  </a>
+                )}
               </div>
 
             </motion.div>
@@ -231,21 +187,21 @@ const ProjectsSection = () => {
                 {/* Footer Buttons */}
                 <div className="flex gap-4 pt-6 border-t border-[#2C2C2C]">
                   {selectedProject.gitLink && (
-                    <a 
-                      href={selectedProject.gitLink} 
-                      target="_blank" 
-                      rel="noreferrer" 
-                      className="flex-1 flex items-center justify-center gap-2 bg-[#2C2C2C] hover:bg-[#3D3D3D] text-white py-3 rounded-lg transition-colors font-medium"
+                    <a
+                      href={selectedProject.gitLink}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex-1 flex items-center justify-center gap-2 border border-[#2C2C2C] bg-[#2C2C2C] text-white py-3 rounded-lg hover:bg-transparent hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 font-medium"
                     >
                       <Code2 size={18} /> View Code
                     </a>
                   )}
                   {selectedProject.liveLink && (
-                    <a 
-                      href={selectedProject.liveLink} 
-                      target="_blank" 
-                      rel="noreferrer" 
-                      className="flex-1 flex items-center justify-center gap-2 bg-[#C778DD] hover:bg-[#a04fa0] text-black py-3 rounded-lg transition-colors font-bold"
+                    <a
+                      href={selectedProject.liveLink}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex-1 flex items-center justify-center gap-2 border border-[#C778DD] bg-[#C778DD] text-[#0B0B0D] py-3 rounded-lg hover:bg-transparent hover:text-[#C778DD] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 font-bold"
                     >
                       <ExternalLink size={18} /> Live Demo
                     </a>

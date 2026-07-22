@@ -9,7 +9,7 @@ import Ekshop from "../assets/Ekshop.png";
 export const ProjectsData = [
   {
     title: "Agrotrack",
-    description: "AgroTrack+ is a mobile application I’m building as part of my final year project. It supports farmers by providing tools for crop monitoring, soil health tracking, pest detection, and weather updates. The app is built with React Native for cross-platform use and powered by a Node.js + PostgreSQL backend for reliable real-time insights.",
+    description: "A mobile app for farmers, built as my final year project. It tracks crop and soil health, flags pests early, and pulls in live weather data so decisions can be made before problems spread. React Native on the front end, Node.js and PostgreSQL underneath.",
     shortDesc: "A farming tool",
     image: Agrotrack,
     stack: ["ReactNative", "Postgress", "Typescript", "NodeJs"],
@@ -18,7 +18,7 @@ export const ProjectsData = [
   },
   {
     title: "EventHub",
-    description: "EventHub is a comprehensive event management system designed to streamline the process of organizing and promoting events. It provides features for event creation, registration, ticketing, and real-time updates.",
+    description: "An event management system that covers the full lifecycle in one place: creating events, handling registrations, issuing tickets, and pushing real-time updates to attendees. Built to replace the usual spreadsheet-and-forms setup organizers get stuck with.",
     shortDesc: "Event Management System",
     image: Event,
     stack: ["ReactJs", "NodeJs", "ExpressJs", "MySql"],
@@ -28,7 +28,7 @@ export const ProjectsData = [
   {
     title: "Ekshop",
     description:
-      "EkShop is a local e-commerce platform I co-founded to make shopping easier for students and residents in Nyeri. It allows users to browse products, place orders, and get affordable deliveries. The platform is built with PHP and MySQL, integrates M-Pesa payments, and currently serves over 150 users with 20+ daily deliveries.",
+      "A local e-commerce platform I co-founded to make online shopping practical for students and residents in Nyeri: browse, order, and get an affordable same-area delivery. Built with PHP and MySQL, with M-Pesa payments built in, it now runs 150+ users and 20+ deliveries a day.",
     shortDesc: "E-commerce platform",
     image: Ekshop,
     stack: ["PHP", "MySQL", "JS", "CSS"],
@@ -38,7 +38,7 @@ export const ProjectsData = [
   {
     title: "SwiftCart",
     description:
-      "A modern, full-stack e-commerce platform built using Node.js, React, and MongoDB, designed to deliver a fast, user-friendly shopping experience with features like M-Pesa integration.",
+      "A full-stack e-commerce platform built with Node.js, React, and MongoDB, with M-Pesa checkout designed in from the start instead of bolted on after. Focused on a fast catalog, a clean cart flow, and checkout that doesn't lose customers halfway through.",
     shortDesc: "E-commerce platform",
     image: SwiftCart,
     stack: ["NodeJs", "ReactJs", "ExpressJs", "Tailwind"],
@@ -48,7 +48,7 @@ export const ProjectsData = [
   {
     title: "FilmSage",
     description:
-      "A movie recommendation web application designed to help users discover their next favorite movie.",
+      "A movie discovery web app that pairs a recommendation engine with clean, fast browsing. Built so finding what to watch next takes less time than scrolling through another streaming app's catalog.",
     shortDesc: "Movie Recommendation System",
     image: FilmSage,
     stack: ["React", "NodeJs", "TypeScript", "Tailwind"],
@@ -57,7 +57,7 @@ export const ProjectsData = [
   },
   {
     title: "PortFolio",
-    description: "Personal portfolio",
+    description: "This site is a single-page portfolio built with React and Tailwind, covering shipped work, the stack behind it, and how I actually run a project from discovery through to support after launch.",
     shortDesc: "Developer portfolio website",
     image: Portfolio,
     stack: ["ReactJs", "JavaScript", "Tailwind"],
@@ -110,12 +110,25 @@ export const skillsData = [
   },
 ];
 
-export const funFacts = [
-  "I am a curious soul",
-  "I love playing BasketBall",
-  "Favourite Meal - Anything that involves Chapati",
-  "I love creating - I love fixing bugs",
-  "Favourite Show - Attack on Titan",
-  "I love networking and meeting new people",
-  "I value clear communication",
+export const capabilitiesData = [
+  {
+    title: "Web Development & UI/UX",
+    description: "Responsive, production-grade web apps and interfaces focused on clarity and usability.",
+    skills: ["React", "JavaScript", "TypeScript", "Tailwind", "HTML", "CSS"],
+  },
+  {
+    title: "Mobile Development",
+    description: "Cross-platform apps with React Native and Flutter.",
+    skills: ["React Native", "Flutter", "Dart"],
+  },
+  {
+    title: "Backend, APIs & Databases",
+    description: "Reliable REST APIs and services, with schema design across SQL and NoSQL systems.",
+    skills: ["NodeJs", "ExpressJs", "PostgreSql", "MySql", "MongoDB", "Python"],
+  },
+  {
+    title: "E-commerce & Payments",
+    description: "Online stores with M-Pesa payment integration, built and shipped to real users.",
+    skills: ["M-Pesa API", "NodeJs", "PHP", "MySql"],
+  },
 ];
